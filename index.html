@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tootltip</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--<script type="text/javascript" src="popup.js"> </script>-->
+</head>
+<body>
+<table class="file-table">
+    <tr>
+        <td class="filename nameCol">FileName</td>
+        <td class="filelink downloadCol">Download Link</td>
+    </tr>
+    <tr>
+        <td class="nameCol">Sublime</td>
+        <td class="downloadCol">
+            <a href="#" class="tooltip sublime-tooltip" data-tooltip="23 MB" onclick=showPopup()>Download</a></td>
+    </tr>
+    <tr>
+        <td class="nameCol">Photoshop</td>
+        <td class="downloadCol"><a href="#" onclick=showPopup() class="tooltip photoshop-tooltip" data-tooltip="45 MB">Download</a></td>
+    </tr>
+    <tr>
+        <td class="nameCol">Illustrator</td>
+        <td class="downloadCol"><a href="#" onclick=showPopup() class="tooltip illustrator-tooltip" data-tooltip="40 MB">Download</a></td>
+    </tr>
+    <tr>
+        <td class="nameCol">WebMaster</td>
+        <td class="downloadCol"><a href="#" onclick=showPopup() class="tooltip webmaster-tooltip" data-tooltip="60 MB">Download</a></td>
+    </tr>
+    <tr>
+        <td class="nameCol">Bootstrap</td>
+        <td class="downloadCol"><a href="#" onclick=showPopup() class="tooltip bootstrap-tooltip" data-tooltip="50 MB">Download</a></td>
+    </tr>
+    <tr>
+        <td class="nameCol">Magento</td>
+        <td class="downloadCol"><a href="#" onclick=showPopup() class="tooltip magento-tooltip" data-tooltip="35 MB">Download</a></td>
+    </tr>
+    <tr>
+        <td class="nameCol">AbanteCart</td>
+        <td class="downloadCol"><a href="#" onclick=showPopup() class="tooltip abante-tooltip" data-tooltip="18 MB">Download</a></td>
+    </tr>
+</table>
+<!-------------popup content starts here---------->
+<div class="popup" id="popup">
+    <div class="popup-contents">
+    <span class="popup-text">Are you sure you want to download?</span>
+        <br>
+    <button class="confirmBtn" onclick=hidePopup()>Okay!</button>
+    </div>
+</div>
+<!-------------popup content starts here---------->
+
+<script>
+    var popupElement = document.getElementById("popup");
+    // or     var popupElement = document.querySelector('#popup');
+
+    function showPopup () {
+        popupElement.style.display = 'block';
+    }
+
+    function hidePopup () {
+        popupElement.style.display = 'none';
+    }
+    window.onclick = function (e) {
+        if(e.target == popupElement){
+            popupElement.style.display = 'none';
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
