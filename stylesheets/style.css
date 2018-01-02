@@ -31,13 +31,13 @@ a {
     font-size: 18px;
     padding-left: 20px;
 }
-a.sublime-tooltip:after,
-a.photoshop-tooltip:after,
-a.illustrator-tooltip:after,
-a.webmaster-tooltip:after,
-a.bootstrap-tooltip:after,
-a.magento-tooltip:after,
-a.abante-tooltip:after{
+a.right-tooltip:after,
+a.left-tooltip:after,
+a.up-tooltip:after,
+a.down-tooltip:after,
+a.bottomLeft-tooltip:after,
+a.bottomRight-tooltip:after,
+a.bottomTop-tooltip:after{
     content: attr(data-tooltip);
     position: absolute;
     background: rgba(50,50,50,0.8);
@@ -53,13 +53,13 @@ a.abante-tooltip:after{
     opacity: 0;
     transition: all 0.8s linear;
 }
-.sublime-tooltip:before,
-.photoshop-tooltip:before,
-.illustrator-tooltip:before,
-.webmaster-tooltip:before,
-.bootstrap-tooltip:before,
-.magento-tooltip:before,
-.abante-tooltip:before{
+.right-tooltip:before,
+.left-tooltip:before,
+.up-tooltip:before,
+.down-tooltip:before,
+.bottomRight-tooltip:before,
+.bottomLeft-tooltip:before,
+.bottomTop-tooltip:before{
     content: "";
     position: absolute;
     /*display: none;*/
@@ -138,43 +138,43 @@ td.downloadCol:not(.filelink) {
     font-weight: 600;
 }
 
-a.sublime-tooltip:after {
+a.right-tooltip:after {
     top: 14%;
     left: 76%;
 }
-a.photoshop-tooltip:after{
+a.left-tooltip:after{
     top: 27%;
     left: 40%;
 }
-a.illustrator-tooltip:after{
+a.up-tooltip:after{
     left: 55%;
     margin-left: 49px;
     bottom: 62%;
 }
-a.webmaster-tooltip:after{
+a.down-tooltip:after{
     bottom: 27%;
     left: 59%;
 }
-a.bootstrap-tooltip:after{
+a.bottomRight-tooltip:after{
     top: 64%;
     left: 76%;
 }
-a.magento-tooltip:after{
+a.bottomLeft-tooltip:after{
     bottom: 13%;
     left: 40%;
 }
-a.abante-tooltip:after{
+a.bottomTop-tooltip:after{
     left: 55%;
     margin-left: 49px;
     bottom: 12%;
 }
-.sublime-tooltip:before{
+.right-tooltip:before{
     margin-left: -136px;
     border-color: transparent #636363 transparent transparent;
     top: 17%;
     left: 100%;
 }
-.photoshop-tooltip:before{
+.left-tooltip:before{
     top: 30%;
     margin-left: -133px;
     left: 83%;
@@ -182,29 +182,29 @@ a.abante-tooltip:after{
 
 }
 
-.illustrator-tooltip:before{
+.up-tooltip:before{
     top: 38%;
     right: 28%;
     border-color: #636363 transparent transparent transparent;
 }
-.webmaster-tooltip:before{
+.down-tooltip:before{
     top: 59%;
     right: 28%;
     border-color: transparent transparent #636363 transparent;
 }
-.bootstrap-tooltip:before{
+.bottomRight-tooltip:before{
     margin-left: -136px;
     border-color: transparent #636363 transparent transparent;
     top: 67%;
     left: 100%;
 }
-.magento-tooltip:before{
+.bottomLeft-tooltip:before{
     bottom: 16%;
     margin-left: -133px;
     left: 83%;
     border-color: transparent transparent transparent #636363;
 }
-.abante-tooltip:before{
+.bottomTop-tooltip:before{
     bottom: 8%;
     right: 28%;
     border-color: #636363 transparent transparent transparent;
