@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tootltip</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script type="text/javascript" src="scripts/popup.js"> </script>
 </head>
