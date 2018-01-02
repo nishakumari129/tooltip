@@ -31,13 +31,7 @@ a {
     font-size: 18px;
     padding-left: 20px;
 }
-a.right-tooltip:after,
-a.left-tooltip:after,
-a.up-tooltip:after,
-a.down-tooltip:after,
-a.bottomLeft-tooltip:after,
-a.bottomRight-tooltip:after,
-a.bottomTop-tooltip:after{
+.tooltip:after{
     content: attr(data-tooltip);
     position: absolute;
     background: rgba(50,50,50,0.8);
@@ -45,33 +39,62 @@ a.bottomTop-tooltip:after{
     width: 100px;
     height: 26px;
     border-radius: 5px;
-    /*display: none;*/
-    margin-left: 24px;
+    margin-left: 51px;
     z-index: 1;
     padding: 5px 0;
-    /*visibility: visible;*/
+    top: 39%;
     opacity: 0;
     transition: all 0.8s linear;
 }
-.right-tooltip:before,
-.left-tooltip:before,
-.up-tooltip:before,
-.down-tooltip:before,
-.bottomRight-tooltip:before,
-.bottomLeft-tooltip:before,
-.bottomTop-tooltip:before{
+.tooltip:before{
     content: "";
     position: absolute;
     border-width: 8px;
+    top: 7%;
+    right: -47%;
     border-style: solid;
     opacity: 0;
     transition: all 0.8s linear;
+}
+/*a.right-tooltip:after,*/
+/*a.left-tooltip:after,*/
+/*a.up-tooltip:after,*/
+/*a.down-tooltip:after,*/
+/*a.bottomLeft-tooltip:after,*/
+/*a.bottomRight-tooltip:after,*/
+/*a.bottomTop-tooltip:after{*/
+    /*content: attr(data-tooltip);*/
+    /*position: absolute;*/
+    /*background: rgba(50,50,50,0.8);*/
+    /*color: #fff;*/
+    /*width: 100px;*/
+    /*height: 26px;*/
+    /*border-radius: 5px;*/
+    /*!*display: none;*!*/
+    /*margin-left: 24px;*/
+    /*z-index: 1;*/
+    /*padding: 5px 0;*/
+    /*!*visibility: visible;*!*/
+    /*opacity: 0;*/
+    /*transition: all 0.8s linear;*/
+/*}*/
+/*.right-tooltip:before,*/
+/*.left-tooltip:before,*/
+/*.up-tooltip:before,*/
+/*.down-tooltip:before,*/
+/*.bottomRight-tooltip:before,*/
+/*.bottomLeft-tooltip:before,*/
+/*.bottomTop-tooltip:before{*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*border-width: 8px;*/
+    /*border-style: solid;*/
+    /*opacity: 0;*/
+    /*transition: all 0.8s linear;*/
 
-}
-a.tooltip:hover::before,
-a.tooltip:hover::after {
-    opacity: 0.9;
-}
+/*}*/
+
+
 /*----------common style ends here---------------*/
 
 /*----------table style starts here---------------*/
@@ -122,89 +145,152 @@ td.nameCol:not(.filename) {
     font-weight: 600;
     font-size: 16px;
 }
-.tooltip {
+.download-link {
     color: #009bf6;
     border-bottom: 1px solid #009bf6;
+    position: relative;
 }
 .downloadCol{
     text-align: center;
+
 }
 td.downloadCol:not(.filelink) {
     font-size: 15px;
     font-weight: 600;
 }
 
-a.right-tooltip:after {
-    top: 14%;
+
+
+.right-tooltip:after {
+    top: -40%;
     left: 76%;
 }
-a.left-tooltip:after{
-    top: 27%;
+.left-tooltip:after{
+    top: -43%;
     left: 40%;
 }
-a.up-tooltip:after{
-    left: 55%;
-    margin-left: 49px;
-    bottom: 62%;
+.up-tooltip:after{
+    left: -91%;
+    top: -35%;
 }
-a.down-tooltip:after{
-    bottom: 27%;
-    left: 59%;
-}
-a.bottomRight-tooltip:after{
-    top: 64%;
-    left: 76%;
-}
-a.bottomLeft-tooltip:after{
-    bottom: 13%;
-    left: 40%;
-}
-a.bottomTop-tooltip:after{
-    left: 55%;
-    margin-left: 49px;
-    bottom: 12%;
+.down-tooltip:after{
+    margin-left: -86px;
 }
 .right-tooltip:before{
-    margin-left: -136px;
-    border-color: transparent #636363 transparent transparent;
-    top: 17%;
-    left: 100%;
+border-color: transparent #636363 transparent transparent;
+
 }
 .left-tooltip:before{
-    top: 30%;
-    margin-left: -133px;
-    left: 83%;
-    border-color: transparent transparent transparent #636363;
+border-color: transparent transparent transparent #636363;
 
 }
-
 .up-tooltip:before{
-    top: 38%;
-    right: 28%;
     border-color: #636363 transparent transparent transparent;
 }
-.down-tooltip:before{
-    top: 59%;
-    right: 28%;
+.down-tooltip:before {
     border-color: transparent transparent #636363 transparent;
 }
-.bottomRight-tooltip:before{
-    margin-left: -136px;
-    border-color: transparent #636363 transparent transparent;
-    top: 67%;
-    left: 100%;
+.right-tooltip:hover::after {
+    opacity: 1;
+    left: 48%;
+
 }
-.bottomLeft-tooltip:before{
-    bottom: 16%;
-    margin-left: -133px;
-    left: 83%;
-    border-color: transparent transparent transparent #636363;
+.right-tooltip:hover::before{
+    opacity: 1;
+    right: -18%;
 }
-.bottomTop-tooltip:before{
-    bottom: 8%;
-    right: 28%;
-    border-color: #636363 transparent transparent transparent;
+
+.left-tooltip:hover::after {
+    opacity: 1;
+    left: -216%;
+
 }
+.left-tooltip:hover::before{
+    opacity: 1;
+    left: -14%;
+}
+.up-tooltip:hover::before{
+    opacity: 1;
+    top: -40%;
+    margin-right: 70px;
+}
+.up-tooltip:hover::after{
+    opacity: 1;
+    top: -240%;
+}
+.down-tooltip:hover::before{
+    opacity: 1;
+    right: 40%;
+    bottom: -89%
+}
+.down-tooltip:hover::after{
+    opacity: 1;
+    top: 192%;
+    left: 101%;
+}
+/*.up-tooltip:after{*/
+    /*left: 55%;*/
+    /*margin-left: 49px;*/
+    /*bottom: 62%;*/
+/*}*/
+/*.down-tooltip:after{*/
+    /*bottom: 27%;*/
+    /*left: 59%;*/
+/*}*/
+/*.bottomRight-tooltip:after{*/
+    /*top: 64%;*/
+    /*left: 76%;*/
+/*}*/
+/*.bottomLeft-tooltip:after{*/
+    /*bottom: 13%;*/
+    /*left: 40%;*/
+/*}*/
+/*.bottomTop-tooltip:after{*/
+    /*left: 55%;*/
+    /*margin-left: 49px;*/
+    /*bottom: 12%;*/
+/*}*/
+/*.right-tooltip:before{*/
+    /*margin-left: -136px;*/
+    /*border-color: transparent #636363 transparent transparent;*/
+    /*top: 17%;*/
+    /*left: 100%;*/
+/*}*/
+/*.left-tooltip:before{*/
+    /*top: 30%;*/
+    /*margin-left: -133px;*/
+    /*left: 83%;*/
+    /*border-color: transparent transparent transparent #636363;*/
+
+/*}*/
+
+/*.up-tooltip:before{*/
+    /*top: 38%;*/
+    /*right: 28%;*/
+    /*border-color: #636363 transparent transparent transparent;*/
+/*}*/
+/*.down-tooltip:before{*/
+    /*top: 59%;*/
+    /*right: 28%;*/
+    /*border-color: transparent transparent #636363 transparent;*/
+/*}*/
+/*.bottomRight-tooltip:before{*/
+    /*margin-left: -136px;*/
+    /*border-color: transparent #636363 transparent transparent;*/
+    /*top: 67%;*/
+    /*left: 100%;*/
+/*}*/
+/*.bottomLeft-tooltip:before{*/
+    /*bottom: 16%;*/
+    /*margin-left: -133px;*/
+    /*left: 83%;*/
+    /*border-color: transparent transparent transparent #636363;*/
+/*}*/
+/*.bottomTop-tooltip:before{*/
+    /*bottom: 8%;*/
+    /*right: 28%;*/
+    /*border-color: #636363 transparent transparent transparent;*/
+/*}*/
 
 
 /*----------table style ends here---------------*/
