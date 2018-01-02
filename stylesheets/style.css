@@ -68,8 +68,8 @@ a.bottomTop-tooltip:after{
     transition: all 0.8s linear;
 
 }
-a:hover::before,
-a:hover::after {
+a.tooltip:hover::before,
+a.tooltip:hover::after {
     opacity: 0.9;
 }
 /*----------common style ends here---------------*/
@@ -87,31 +87,30 @@ a:hover::after {
     border: 1px solid #009bf6;
     letter-spacing: 1px;
 }
-td {
+.tableCol {
     border-right: 1px solid #009bf6;
     border-collapse: collapse;
 }
 
-table td:last-child {
+table td.tableCol:last-child {
     border-right: none;
 }
 
-table.file-table {}
 
-table {
-    /* border: none; */
+.mainTable {
+
     border-collapse: collapse;
 }
 
-tr:first-child {
+tr.tableRow:first-child {
     background-color: #009bf6;
 }
 
-tr:nth-child(2n+2) {
+tr.tableRow:nth-child(2n+2) {
     background-color: #f4f4f4;
 }
 
-tr:nth-child(2n+3) {
+tr.tableRow:nth-child(2n+3) {
     background-color: #e8e8e8;
 }
 .nameCol{
